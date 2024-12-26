@@ -26,14 +26,10 @@
 @media (width <= 48em) {
   .hero {
     margin-bottom: 3.5rem;
-    max-width: 20rem;
+    max-width: 25rem;
     padding-inline: 2.25rem;
-    & .hero-description {
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
     & .hero-title {
-      font-size: 2.1875rem;
+      font-size: 2.175rem;
     }
   }
 }
