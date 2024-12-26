@@ -1,0 +1,32 @@
+.hero {
+  grid-area: hero;
+  max-width: 40rem;
+  padding-inline: 7.5rem 0;
+  & .hero-description {
+    font-family: var(--ff-roboto-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+
+    color: var(--content-secondary);
+  }
+  & .hero-title {
+    font-family: var(--ff-sora);
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    color: var(--content-primary);
+  }
+}
+
+@media (width <= 48em) {
+  .hero {
+    & .hero-title {
+      font-size: 2.5rem;
+    }
+  }
+}

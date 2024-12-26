@@ -1,0 +1,81 @@
+*,
+*::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --content-primary: #ffffff;
+  --content-secondary: #c7c9cc;
+  --content-tertiary: #d9d9d9;
+  --content-brand: #c58de7;
+  --color-inverse: #030203;
+
+  --background-primary: #020202;
+  --background-secondary: #111012;
+  --background-tertiary: #24222e;
+  --background-brand: #c58de7;
+  --background-gray: #3d3d3d;
+
+  --accent-pink: #d586e0;
+  --accent-blue: #91a1fa;
+  --accent-gree: #77c0af;
+  --accent-lime: #d1dc97;
+  --accent-red: #d1dc97;
+
+  --gradient-border: #77c0af 0%, #d1dc97 14.84%, #e9a9b3 32.15%, #d586e0 65.79%,
+    #91a1fa 84.58%;
+  --gradient-background: 91.26deg, #d586e0 0%, #91a1fa 98.93%;
+  --gradient-content: #c7c9cc 0%, #3d3d3d 100%;
+
+  /* FONTS */
+  --ff-sora: "Sora", serif;
+  --ff-roboto-mono: "Roboto Mono", serif;
+  --ff-roboto-flex: "Roboto Flex", serif;
+}
+
+/* RESET CSS IMG */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+html {
+  background-color: #000;
+}
+
+body {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 22.66%,
+      rgba(0, 0, 0, 0.54) 100%
+    ),
+    url("../images/bg/bg.png");
+  background-size: cover; /* Faz com que a imagem cubra o elemento */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  display: grid;
+  align-content: center;
+  grid-template-areas:
+    "hero form"
+    "questions form";
+}
+
+@media (width <= 48em) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
