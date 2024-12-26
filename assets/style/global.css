@@ -75,7 +75,10 @@ main {
 
 @media (width <= 48em) {
   main {
-    display: grid;
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "form"
+      "questions";
   }
 }

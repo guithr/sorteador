@@ -18,7 +18,7 @@ header {
   }
 }
 
-@media (width <= 22em) {
+@media (width <= 48em) {
   header {
     justify-content: center;
     padding-inline: 0;

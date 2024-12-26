@@ -35,3 +35,9 @@
     font-size: 0.75rem;
   }
 }
+
+@media (width <= 48em) {
+  .questions {
+    padding-inline: 2.25rem;
+  }
+}
