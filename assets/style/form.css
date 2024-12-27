@@ -1,10 +1,11 @@
 .form-section {
   grid-area: form;
   align-self: center;
-  justify-content: center;
+  justify-self: end;
+  max-width: 37.125rem;
+  padding-inline: 0 7.5rem;
   & .form-instructions {
     margin-bottom: 2.5rem;
-    max-width: 29rem;
     & .form-title {
       font-family: var(--ff-roboto-flex);
       font-weight: 700;
@@ -15,50 +16,52 @@
     }
     & .form-description {
       font-family: var(--ff-roboto-flex);
-      font-weight: 400;
-      font-size: 1rem;
+      font-weight: 500;
       color: var(--content-secondary);
       line-height: 150%;
     }
   }
-  & .form-group {
-    margin-bottom: 1.5rem;
-    display: flex;
-    gap: 0.75rem;
-    & .input-box {
+  & .number-form {
+    & .form-group {
+      margin-bottom: 1.5rem;
       display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      & label {
-        font-family: var(--ff-roboto-flex);
-        font-weight: 700;
-        line-height: 150%;
-        font-size: 1rem;
-        text-transform: uppercase;
-        text-align: center;
+      gap: 0.75rem;
+      & .input-box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        & label {
+          font-family: var(--ff-roboto-flex);
+          font-weight: 700;
+          line-height: 150%;
+          font-size: 1rem;
+          text-transform: uppercase;
+          text-align: center;
 
-        color: var(--content-secondary);
-      }
-      & input {
-        width: 5.375rem;
-        padding: 0.25rem 0.5rem;
-        background-color: var(--background-secondary);
-        border: none;
-        border-radius: 0.5rem;
-        color: var(--content-primary);
-        font-family: var(--ff-sora);
-        font-weight: 700;
-        line-height: 150%;
-        font-size: 2rem;
-        text-transform: uppercase;
-        text-align: center;
+          color: var(--content-secondary);
+        }
+        & input {
+          width: 5.375rem;
+          padding: 0.25rem 0.5rem;
+          background-color: var(--background-secondary);
+          border: none;
+          border-radius: 0.5rem;
+          color: var(--content-primary);
+          font-family: var(--ff-sora);
+          font-weight: 700;
+          line-height: 150%;
+          font-size: 2rem;
+          text-transform: uppercase;
+          text-align: center;
 
-        &::-webkit-inner-spin-button {
-          -webkit-appearance: none;
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+          }
         }
       }
     }
   }
+
   /* TOGGLE BUTTON */
   .switch {
     margin-bottom: 2.5rem;
@@ -147,7 +150,6 @@
     background-color: var(--background-tertiary);
     padding-block: 1rem;
     width: 100%;
-    max-width: 29rem;
     border-radius: 0.5rem;
 
     color: var(--content-primary);
@@ -163,6 +165,7 @@
 
 @media (width <= 48em) {
   .form-section {
+    justify-self: unset;
     width: 100%;
     max-width: 25rem;
     padding-inline: 2.25rem;
