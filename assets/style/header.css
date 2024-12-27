@@ -1,4 +1,4 @@
-header {
+.header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -8,7 +8,7 @@ header {
   padding-block: 2.95rem 5.5rem;
   padding-inline: 7.5rem;
 
-  & h3 {
+  .header-title {
     font-family: var(--ff-sora);
     font-size: 1.5rem;
     font-weight: 800;
@@ -19,7 +19,7 @@ header {
 }
 
 @media (width <= 48em) {
-  header {
+  .header {
     justify-content: center;
     padding-inline: 0;
   }

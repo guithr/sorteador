@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <!-- PREE CONECT GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- META -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TITLE -->
     <title>Sorteador de Números</title>
+    <!-- GOOGLE FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
+    <!-- MY CSS -->
     <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
   <body>
-    <header>
-      <img src="./assets/images/icons/logo.svg" alt="Logotipo Sorteador" />
-      <h3>Numbers</h3>
+    <header class="header">
+      <img
+        class="header-logo"
+        src="./assets/images/icons/logo.svg"
+        alt="Logotipo Sorteador"
+      />
+      <h3 class="header-title">Numbers</h3>
     </header>
 
     <main>
-      <section class="hero">
-        <p class="hero-description">Online - Gratuito</p>
-        <h1 class="hero-title">Sorteador de números</h1>
+      <section class="hero-section">
+        <p class="hero-tagline">Online - Gratuito</p>
+        <h1 class="hero-heading">Sorteador de números</h1>
       </section>
 
-      <section class="questions">
-        <div class="question">
+      <section class="faq-section">
+        <div class="faq-item">
           <img
             src="./assets/images/icons/question.svg"
             alt="Ícone de pergunta"
-            class="question-icon"
+            class="faq-icon"
           />
-          <div class="question-content">
-            <h3 class="rflex-md">Como funciona o sorteador de números?</h3>
-            <p class="rflex-sm">
+          <div class="faq-content">
+            <h3 class="faq-question">Como funciona o sorteador de números?</h3>
+            <p class="faq-answer">
               O sorteador utiliza um algoritmo de geração aleatória para criar
               números dentro do intervalo especificado pelo usuário.
             </p>
           </div>
         </div>
-        <div class="question">
+        <div class="faq-item">
           <img
             src="./assets/images/icons/question.svg"
             alt="Ícone de pergunta"
-            class="question-icon"
+            class="faq-icon"
           />
-          <div class="question-content">
-            <h3 class="rflex-md">Posso escolher o intervalo dos números?</h3>
-            <p class="rflex-sm">
+          <div class="faq-content">
+            <h3 class="faq-question">
+              Posso escolher o intervalo dos números?
+            </h3>
+            <p class="faq-answer">
               Sim, você pode definir os valores mínimo e máximo para o intervalo
               dos números sorteados.
             </p>
@@ -55,43 +66,59 @@
         </div>
       </section>
 
-      <section class="form-section">
-        <div class="form-instructions">
-          <h2 class="form-title">Quero Sortear:</h2>
-          <p class="form-description">
+      <section class="lottery-form-section">
+        <div class="form-header">
+          <h2 class="form-heading">Quero Sortear:</h2>
+          <p class="form-subheading">
             Defina o intervalo e a quantidade de números, clique em "Sortear" e
             veja os resultados na tela. É rápido e fácil!
           </p>
         </div>
 
-        <form class="number-form">
-          <div class="form-group">
-            <div class="input-box">
-              <label for="quantity">Números</label>
-              <input type="number" id="quantity" class="form-input" min="1" />
+        <form class="lottery-form">
+          <div class="input-group">
+            <div class="input-field">
+              <label for="quantity" class="input-label">Números</label>
+              <input
+                type="number"
+                id="quantity"
+                class="input-control"
+                min="1"
+              />
             </div>
-            <div class="input-box">
-              <label for="range-min">De</label>
-              <input type="number" id="range-min" class="form-input" min="1" />
+            <div class="input-field">
+              <label for="range-min" class="input-label">De</label>
+              <input
+                type="number"
+                id="range-min"
+                class="input-control"
+                min="1"
+              />
             </div>
-            <div class="input-box">
-              <label for="range-max">Até</label>
-              <input type="number" id="range-max" class="form-input" min="1" />
+            <div class="input-field">
+              <label for="range-max" class="input-label">Até</label>
+              <input
+                type="number"
+                id="range-max"
+                class="input-control"
+                min="1"
+              />
             </div>
           </div>
-          <div class="form-options">
-            <label class="switch">
-              <input type="checkbox" name="" checked />
+          <div class="form-toggle">
+            <label class="toggle-switch">
+              <input type="checkbox" name="unique-numbers" checked />
               <span class="slider round"></span>
-              <span class="text-toggle">Não repetir número</span>
+              <span class="toggle-text">Não repetir número</span>
             </label>
           </div>
-          <button type="submit" class="form-button">
+          <button type="submit" class="submit-button">
             Sortear
             <span
               ><img
                 src="./assets/images/icons/arrow-left.svg"
                 alt="Ícone arrow left"
+                class="arrow-icon"
             /></span>
           </button>
         </form>

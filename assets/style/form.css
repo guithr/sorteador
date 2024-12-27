@@ -1,12 +1,12 @@
-.form-section {
+.lottery-form-section {
   grid-area: form;
   align-self: center;
   justify-self: end;
   max-width: 37.125rem;
   padding-inline: 0 7.5rem;
-  & .form-instructions {
+  & .form-header {
     margin-bottom: 2.5rem;
-    & .form-title {
+    & .form-heading {
       font-family: var(--ff-roboto-flex);
       font-weight: 700;
       text-transform: uppercase;
@@ -14,23 +14,23 @@
       color: var(--content-primary);
       line-height: 150%;
     }
-    & .form-description {
+    & .form-subheading {
       font-family: var(--ff-roboto-flex);
       font-weight: 500;
       color: var(--content-secondary);
       line-height: 150%;
     }
   }
-  & .number-form {
-    & .form-group {
+  & .lottery-form {
+    & .input-group {
       margin-bottom: 1.5rem;
       display: flex;
       gap: 0.75rem;
-      & .input-box {
+      & .input-field {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        & label {
+        & .input-label {
           font-family: var(--ff-roboto-flex);
           font-weight: 700;
           line-height: 150%;
@@ -40,7 +40,7 @@
 
           color: var(--content-secondary);
         }
-        & input {
+        & .input-control {
           width: 5.375rem;
           padding: 0.25rem 0.5rem;
           background-color: var(--background-secondary);
@@ -63,7 +63,7 @@
   }
 
   /* TOGGLE BUTTON */
-  .switch {
+  .form-toggle {
     margin-bottom: 2.5rem;
     position: relative;
     display: inline-block;
@@ -71,7 +71,7 @@
     height: 20px;
   }
 
-  .switch input {
+  .form-toggle input {
     opacity: 0;
     width: 0;
     height: 0;
@@ -128,7 +128,7 @@
   .slider.round:before {
     border-radius: 50%;
   }
-  .text-toggle {
+  .toggle-text {
     position: absolute;
     left: 35px;
     color: var(--content-primary);
@@ -140,7 +140,7 @@
     width: max-content;
   }
 
-  & .form-button {
+  & .submit-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,13 +164,13 @@
 }
 
 @media (width <= 48em) {
-  .form-section {
+  .lottery-form-section {
     justify-self: unset;
     width: 100%;
     max-width: 25rem;
     padding-inline: 2.25rem;
-    & .form-instructions {
-      & .form-description {
+    & .form-header {
+      & .form-subheading {
         font-size: 0.875rem;
       }
     }

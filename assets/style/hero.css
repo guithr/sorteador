@@ -1,8 +1,8 @@
-.hero {
+.hero-section {
   grid-area: hero;
   max-width: 40rem;
   padding-inline: 7.5rem 0;
-  & .hero-description {
+  & .hero-tagline {
     font-family: var(--ff-roboto-mono);
     font-size: 1rem;
     font-weight: 700;
@@ -12,7 +12,7 @@
 
     color: var(--content-secondary);
   }
-  & .hero-title {
+  & .hero-heading {
     font-family: var(--ff-sora);
     font-size: 4.5rem;
     font-weight: 800;
@@ -24,11 +24,11 @@
 }
 
 @media (width <= 48em) {
-  .hero {
+  .hero-section {
     margin-bottom: 3.5rem;
     max-width: 25rem;
     padding-inline: 2.25rem;
-    & .hero-title {
+    & .hero-heading {
       font-size: 2.175rem;
     }
   }
