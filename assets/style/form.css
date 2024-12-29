@@ -1,7 +1,6 @@
 .lottery-form-section {
   grid-area: form;
   align-self: center;
-  justify-self: end;
   max-width: 37.125rem;
   padding-inline: 0 7.5rem;
 
@@ -33,6 +32,7 @@
 
       .input-field {
         display: flex;
+        max-width: 5.375rem;
         flex-direction: column;
         gap: 0.5rem;
 
@@ -66,7 +66,7 @@
           }
 
           .input-control {
-            width: 5.375rem;
+            width: 100%;
             padding: 0.25rem 0.5rem;
             background-color: var(--background-secondary);
             border: none;
@@ -202,6 +202,25 @@
     .arrow-icon {
       transition: transform 0.3s ease-in-out; /* Transição do ícone */
     }
+  }
+
+  .result-numbers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5.625rem, 1fr));
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .result-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--ff-roboto-mono);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--content-brand);
+    border-radius: 0.5rem;
   }
 }
 
