@@ -30,6 +30,9 @@ const validateInput = (min, max) => {
   if (min > max) {
     alert("O valor mínimo não pode ser maior que o máximo.");
     return false;
+  } else if (!quantityInput || !min || !max) {
+    alert("Preencha todos os campos.");
+    return false;
   }
   return true;
 };
