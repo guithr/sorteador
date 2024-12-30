@@ -47,6 +47,7 @@ const generateResults = (quantity, min, max) =>
 
 // Atualiza a interface para exibir os resultados
 const updateUIForResults = (results) => {
+  clearPreviousResults();
   removeUnnecessaryElements();
   updateFormHeaders();
   displayResults(results);
@@ -54,7 +55,6 @@ const updateUIForResults = (results) => {
 };
 
 // Remove elementos desnecessários do formulário
-// Aqui eu quero deixar eles invisivel, para quando necessário chama-los novamente.
 const removeUnnecessaryElements = () => {
   const input = document.querySelector(".input-group");
   const toggleSwitch = document.querySelector(".form-toggle");
@@ -99,6 +99,14 @@ const displayResults = (results) => {
 const updateSubmitButton = () => {
   const buttonSubmit = document.querySelector(".submit-button");
   buttonSubmit.innerHTML = `Sortear novamente <img src="./assets/images/icons/again.svg" alt="Ícone sortear novamente" class="again">`;
+};
+
+// Remove os resultados exibidos anteriormente
+const clearPreviousResults = () => {
+  const previousResults = document.querySelector(".result-numbers");
+  if (previousResults) {
+    previousResults.remove();
+  }
 };
 
 // Adiciona o evento ao formulário

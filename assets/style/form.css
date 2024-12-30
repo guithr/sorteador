@@ -9,6 +9,7 @@
 
     .form-heading {
       font-family: var(--ff-roboto-flex);
+      margin-bottom: 0.5rem;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 1.5rem;
@@ -194,12 +195,12 @@
     &:hover {
       background-color: var(--background-secondary);
 
-      .arrow-icon {
+      img {
         transform: translateX(7px);
       }
     }
 
-    .arrow-icon {
+    img {
       transition: transform 0.3s ease-in-out; /* Transição do ícone */
     }
   }
