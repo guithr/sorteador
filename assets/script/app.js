@@ -86,16 +86,25 @@ const displayResults = (results) => {
   const resultNumbers = document.createElement("div");
   resultNumbers.classList.add("result-numbers");
 
+  formHeader.append(resultNumbers); // Adiciona o container antes de começar
+
   results.forEach((result, index) => {
-    const numberElement = document.createElement("span");
-    numberElement.textContent = `${result}`;
-    numberElement.classList.add("result-item");
-    resultNumbers.appendChild(numberElement);
+    setTimeout(() => {
+      const boxItem = document.createElement("div");
+      boxItem.classList.add("box-item");
+
+      const numberElement = document.createElement("span");
+      numberElement.classList.add("number");
+      numberElement.textContent = `${result}`;
+
+      boxItem.appendChild(numberElement);
+      resultNumbers.append(boxItem);
+
+      currentResultNumber++;
+
+      // Aqui a classe já está definida no CSS
+    }, index * 2500);
   });
-
-  currentResultNumber++;
-
-  formHeader.append(resultNumbers);
 };
 
 // Atualiza o botão de envio para "Sortear novamente"

@@ -1,13 +1,16 @@
 .header {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-
   max-width: 1280px;
 
   padding-block: 2.95rem 5.5rem;
   padding-inline: 7.5rem;
 
+  a {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
   .header-title {
     font-family: var(--ff-sora);
     font-size: 1.5rem;

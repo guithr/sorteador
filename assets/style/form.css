@@ -181,17 +181,6 @@
 
     position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 0.5rem;
-      background-color: red;
-      inset: 0;
-      z-index: -1;
-    }
-
     &:hover {
       background-color: var(--background-secondary);
 
@@ -207,21 +196,68 @@
 
   .result-numbers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5.625rem, 1fr));
-    gap: 1rem;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    gap: 0.5rem;
+    isolation: isolate;
   }
 
-  .result-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--ff-roboto-mono);
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 150%;
-    color: var(--content-brand);
+  .box-item {
+    max-width: 6.25rem;
+    padding: 1rem;
     border-radius: 0.5rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      scale: 0;
+      border-radius: 1.5rem;
+      z-index: -1;
+      animation: firstStep 400ms ease-in 2s forwards,
+        secondStep 1s linear 3s forwards, lastStep 1s ease-out 4.5s forwards;
+    }
+  }
+
+  .number {
+    display: inline-block;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    animation: textAppear 500ms linear 3s forwards,
+      textChangeColor 500ms linear 4.5s forwards;
+  }
+}
+@keyframes firstStep {
+  to {
+    scale: 1.2;
+    background: var(--content-brand);
+  }
+}
+
+@keyframes secondStep {
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes lastStep {
+  to {
+    scale: 0;
+    background: transparent;
+  }
+}
+
+@keyframes textAppear {
+  to {
+    color: black;
+  }
+}
+
+@keyframes textChangeColor {
+  to {
+    color: var(--content-brand);
+    scale: 0.8;
   }
 }
 
